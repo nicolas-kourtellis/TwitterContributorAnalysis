@@ -1,0 +1,10 @@
+eu/multisensor/dto/UtilsUserAuth.class
+eu/multisensor/services/TwitterContributorAnalysisServiceMultiKeys.class
+eu/multisensor/dto/ContributorAnalysisRequest.class
+eu/multisensor/dto/SearchNameRequest.class
+eu/multisensor/services/TwitterContributorAnalysisService.class
+eu/multisensor/dto/SearchNameResponse.class
+eu/multisensor/dto/UtilsMultiKeys.class
+eu/multisensor/dto/ContributorAnalysisResponse.class
+eu/multisensor/dto/TwitterCrawlerForMultisensorMultiKeys.class
+eu/multisensor/dto/Utils.class
