@@ -20,7 +20,6 @@
  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  **/
 
-
 package eu.multisensor.dto;
 
 import twitter4j.ResponseList;
