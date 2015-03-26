@@ -31,6 +31,7 @@ package eu.multisensor.services;
 import twitter4j.User;
 import eu.multisensor.dto.ContributorAnalysisRequest;
 import eu.multisensor.dto.ContributorAnalysisResponse;
+import eu.multisensor.dto.ContributorAnalysisWithNameSearchRequest;
 import eu.multisensor.dto.SearchNameRequest;
 import eu.multisensor.dto.SearchNameResponse;
 
@@ -38,7 +39,7 @@ public class Testing {
 
 	public static void main(String[] args) {
 
-		int test = 2;
+		int test = 3;
 
 		if(test==1){
 			
@@ -52,7 +53,7 @@ public class Testing {
 			
 			// Test for the Twitter crawler
 			ContributorAnalysisRequest request = new ContributorAnalysisRequest();
-			request.screenname = "@barackobama";
+			request.screenname = "@BarackObama";
 			ContributorAnalysisResponse response = tcas.performAnalysis(request);
 			
 			System.out.println("NAME: "+response.name);
@@ -90,6 +91,36 @@ public class Testing {
 				else
 					break;
 			}
+		}
+		
+		if(test==3){
+			// Initialization of variables in constructor
+			String keys = "/Users/kourtell/Desktop/MULTISENSOR/trunk/wp3/ms-svc-contributorAnalysis/keys";
+			String interests = "/Users/kourtell/Desktop/MULTISENSOR/trunk/wp3/ms-svc-contributorAnalysis/interests_users";
+			String influences = "/Users/kourtell/Desktop/MULTISENSOR/trunk/wp3/ms-svc-contributorAnalysis/influence.txt";
+			int accuracy = 1;
+			
+			TwitterContributorAnalysisServiceWithNameSearchMultiKeys tcas = new TwitterContributorAnalysisServiceWithNameSearchMultiKeys(keys,interests,influences,accuracy);
+			
+			// Test for the Twitter crawler
+			ContributorAnalysisWithNameSearchRequest request = new ContributorAnalysisWithNameSearchRequest();
+			request.namequery = "barack obama";
+			ContributorAnalysisResponse response = tcas.performAnalysis(request);
+			
+			System.out.println("NAME: "+response.name);
+			System.out.println("ID: "+response.id);
+			System.out.println("LANG: "+response.language);
+			System.out.println("DESCRIPTION: "+response.description);
+			System.out.println("SCREENNAME: "+response.screenname);
+			System.out.println("LOCATION: "+response.location);
+			System.out.println("FOLLOWERS: "+response.nFollowers);
+			System.out.println("FRIENDS: "+response.nFollowings);
+			System.out.println("TWEETS: "+response.nTweets);
+			System.out.println("INTERESTS: "+response.interests_percentage.toString().replace(", ", "\n"));
+			System.out.println("RET. INFLUENCE: "+response.retweet_influence_score);
+			System.out.println("NET. INFLUENCE: "+response.network_influence_score);
+			System.out.println("MEN. INFLUENCE: "+response.mention_influence_score);
+
 		}
 		
 	}

@@ -69,10 +69,10 @@ public class TwitterSearchNamesService {
 
 		try {
 			
-	        // Calling the servince to seach for the particular string
-	        TwitterSearchNamesForMultisensor tcfms = new TwitterSearchNamesForMultisensor(request.query, keys);
+	        // Calling the service to search for the particular string
+	        TwitterSearchNamesForMultisensor tsfn = new TwitterSearchNamesForMultisensor(request.query, keys);
 	        // Return response
-			return tcfms.response;
+			return tsfn.response;
 
 		} catch (Exception ex) {
 			System.err.println("ERROR in producing the response for Request\t"+request.toString());
