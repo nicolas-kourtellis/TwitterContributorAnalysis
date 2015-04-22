@@ -61,8 +61,8 @@ public class TwitterContributorAnalysisService {
 		ContributorAnalysisResponse response = new ContributorAnalysisResponse();
 		try {
 			
-	        String interests = "/Users/kourtell/Documents/workspace2/Multisensor/twitter-crawler/interests_users";
-	        String influences = "/Users/kourtell/Documents/workspace2/Multisensor/twitter-crawler/influence.txt";
+		        String interests = "local_path_file";
+		        String influences = "local_path_file2";
 			TwitterCrawlerForMultisensorSingleKey tcfms = new TwitterCrawlerForMultisensorSingleKey(request.screenname, interests, influences);
 			
 			response = tcfms.response;

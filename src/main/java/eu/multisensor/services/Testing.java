@@ -44,9 +44,9 @@ public class Testing {
 		if(test==1){
 			
 			// Initialization of variables in constructor
-			String keys = "/Users/kourtell/Desktop/MULTISENSOR/trunk/wp3/ms-svc-contributorAnalysis/keys";
-			String interests = "/Users/kourtell/Desktop/MULTISENSOR/trunk/wp3/ms-svc-contributorAnalysis/interests_users";
-			String influences = "/Users/kourtell/Desktop/MULTISENSOR/trunk/wp3/ms-svc-contributorAnalysis/influence.txt";
+			String keys = "keys_file";
+			String interests = "interests_users_file";
+			String influences = "influence_file";
 			int accuracy = 2;
 			
 			TwitterContributorAnalysisServiceMultiKeys tcas = new TwitterContributorAnalysisServiceMultiKeys(keys,interests,influences,accuracy);
@@ -73,7 +73,7 @@ public class Testing {
 		
 		if(test==2){
 			//Test for the Twitter search of usernames
-			String keys = "/Users/kourtell/Desktop/MULTISENSOR/trunk/wp3/ms-svc-contributorAnalysis/keys";
+			String keys = "keys_file";
 			
 			TwitterSearchNamesService tcas = new TwitterSearchNamesService(keys);
 			SearchNameRequest searchrequest = new SearchNameRequest();
@@ -95,9 +95,9 @@ public class Testing {
 		
 		if(test==3){
 			// Initialization of variables in constructor
-			String keys = "/Users/kourtell/Desktop/MULTISENSOR/trunk/wp3/ms-svc-contributorAnalysis/keys";
-			String interests = "/Users/kourtell/Desktop/MULTISENSOR/trunk/wp3/ms-svc-contributorAnalysis/interests_users";
-			String influences = "/Users/kourtell/Desktop/MULTISENSOR/trunk/wp3/ms-svc-contributorAnalysis/influence.txt";
+			String keys = "keys_file";
+			String interests = "interests_users_file";
+			String influences = "influence_file";
 			int accuracy = 1;
 			
 			TwitterContributorAnalysisServiceWithNameSearchMultiKeys tcas = new TwitterContributorAnalysisServiceWithNameSearchMultiKeys(keys,interests,influences,accuracy);
